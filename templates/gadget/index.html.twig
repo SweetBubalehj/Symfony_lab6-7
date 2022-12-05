@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello GadgetController!
+{% endblock %}
+
+{% block body %}
+	<style>
+		.example-wrapper {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+		.example-wrapper code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style>
+
+	<div class="example-wrapper">
+		<h1>{{ gadget.name }}</h1>
+
+		<ul>
+			<li>Category:
+				{{ gadget.category.name }}</li>
+			<li>Price:
+				{{ gadget.price }}</li>
+		</ul>
+	</div>
+{% endblock %}

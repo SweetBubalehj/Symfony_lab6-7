@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello GadgetController!
+{% endblock %}
+
+{% block body %}
+	<style>
+		.example-wrapper {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+		.example-wrapper code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style>
+
+	<div class="example-wrapper">
+		<ul>
+			{% for gadget in gadgets %}
+				<li>
+					<a href="{{ path('app_gadget', { id: gadget.id }) }}">{{ gadget.name }}</a>
+					|
+					<a href="{{ path('app_gadget_remove', { id: gadget.id }) }}">
+						Remove</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endblock %}
